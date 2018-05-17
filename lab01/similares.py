@@ -40,7 +40,9 @@ def sim_pearson(avaliacoes, c1, c2):
 					   for filme in mesmos_filmes]) 
 	                   * sum([pow((avaliacoes[c2][filme]-media_c2), 2) 
 					   for filme in mesmos_filmes]))
-	if denominador == 0: return 0
+	if denominador == 0: 
+		return 0
+		
 	r = numerador / denominador
 	return r
 
@@ -60,5 +62,3 @@ def inverte(avaliacoes):
 			resultado.setdefault(filme,{})
 			resultado[filme][pessoa]=avaliacoes[pessoa][filme]
 	return resultado
-	
-	
