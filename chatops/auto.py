@@ -5,7 +5,7 @@ import re
 import webbrowser
 import smtplib
 import requests
-from weather import Weather
+from weather importcd chatop     Weather
 
 def talkToMe(audio):
     "speaks audio passed as argument"
