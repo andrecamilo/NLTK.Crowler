@@ -1,6 +1,5 @@
 from errbot import BotPlugin, botcmd
 
-
 class HelloBot(BotPlugin):
     """'Hello!' plugin for Errbot"""
 

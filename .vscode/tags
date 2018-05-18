@@ -1,0 +1,140 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACCESS_TOKEN	../lab03/autoriza_twitter.py	/^ACCESS_TOKEN = "50280987-LQzR3DJo8kchyMa535ZAZUd14L2KfH1YF9QsoGoXj"$/;"	kind:variable	line:6
+ACCESS_TOKEN	../lab04/autoriza_app.py	/^ACCESS_TOKEN = "50280987-LQzR3DJo8kchyMa535ZAZUd14L2KfH1YF9QsoGoXj"$/;"	kind:variable	line:7
+ACCESS_TOKEN	../lab04/autoriza_usuario.py	/^ACCESS_TOKEN = "50280987-LQzR3DJo8kchyMa535ZAZUd14L2KfH1YF9QsoGoXj"$/;"	kind:variable	line:7
+ACCESS_TOKEN_SECRET	../lab03/autoriza_twitter.py	/^ACCESS_TOKEN_SECRET = "PpZuShzI20hgUbKv7rSeUCcSTdlVwfZ34VXSxu3tgViYV"$/;"	kind:variable	line:7
+ACCESS_TOKEN_SECRET	../lab04/autoriza_app.py	/^ACCESS_TOKEN_SECRET = "PpZuShzI20hgUbKv7rSeUCcSTdlVwfZ34VXSxu3tgViYV"$/;"	kind:variable	line:8
+ACCESS_TOKEN_SECRET	../lab04/autoriza_usuario.py	/^ACCESS_TOKEN_SECRET = "PpZuShzI20hgUbKv7rSeUCcSTdlVwfZ34VXSxu3tgViYV"$/;"	kind:variable	line:8
+App	../lab02/crawler.py	/^class App:$/;"	kind:class	line:45
+App	../lab04/crawler.py	/^class App:$/;"	kind:class	line:45
+AppCrawler	../lab02/crawler.py	/^class AppCrawler:$/;"	kind:class	line:7
+AppCrawler	../lab04/crawler.py	/^class AppCrawler:$/;"	kind:class	line:7
+BeautifulSoup.py	../lab05/BeautifulSoup.py	1;"	kind:file	line:1
+CONSUMER_API_KEY	../lab03/autoriza_twitter.py	/^CONSUMER_API_KEY = "Gpj7COqxcp1No74bcgWldDz7w"$/;"	kind:variable	line:4
+CONSUMER_API_KEY	../lab04/autoriza_app.py	/^CONSUMER_API_KEY = "Gpj7COqxcp1No74bcgWldDz7w"$/;"	kind:variable	line:5
+CONSUMER_API_KEY	../lab04/autoriza_usuario.py	/^CONSUMER_API_KEY = "Gpj7COqxcp1No74bcgWldDz7w"$/;"	kind:variable	line:5
+CONSUMER_API_SECRET	../lab03/autoriza_twitter.py	/^CONSUMER_API_SECRET = "sapFR6jypP8QRls6NTeAc2zVAMOOYmOnpiUAmumLdKmg42zNVc"$/;"	kind:variable	line:5
+CONSUMER_API_SECRET	../lab04/autoriza_app.py	/^CONSUMER_API_SECRET = "sapFR6jypP8QRls6NTeAc2zVAMOOYmOnpiUAmumLdKmg42zNVc"$/;"	kind:variable	line:6
+CONSUMER_API_SECRET	../lab04/autoriza_usuario.py	/^CONSUMER_API_SECRET = "sapFR6jypP8QRls6NTeAc2zVAMOOYmOnpiUAmumLdKmg42zNVc"$/;"	kind:variable	line:6
+HelloBot	../chatops/main.py	/^class HelloBot(BotPlugin):$/;"	kind:class	line:3
+Sentimento.py	../lab05/Sentimento.py	1;"	kind:file	line:1
+TestHelloBot	../chatops/main_test.py	/^class TestHelloBot(object):$/;"	kind:class	line:6
+Tokenize.py	../lab05/Tokenize.py	1;"	kind:file	line:1
+WOEID	../lab04/trends_twitter.py	/^WOEID = 23424768   # WOEID do Brasil$/;"	kind:variable	line:5
+__init__	../lab02/crawler.py	/^	def __init__(self, nome, desenvolvedor, links):$/;"	kind:member	line:47
+__init__	../lab02/crawler.py	/^	def __init__(self, url_inicial, nivel_max):$/;"	kind:member	line:9
+__init__	../lab04/crawler.py	/^	def __init__(self, url_inicial, nivel_max):$/;"	kind:member	line:9
+__init__	../lab04/crawler.py	/^        def __init__(self, nome, desenvolvedor, links):$/;"	kind:member	line:46
+__str__	../lab02/crawler.py	/^	def __str__(self):$/;"	kind:member	line:52
+__str__	../lab04/crawler.py	/^        def __str__(self):$/;"	kind:member	line:51
+api	../lab03/autoriza_twitter.py	/^api = tweepy.API(auth)$/;"	kind:variable	line:12
+api	../lab04/autoriza_app.py	/^api = tweepy.API(auth)$/;"	kind:variable	line:13
+api	../lab04/autoriza_usuario.py	/^api = tweepy.API(auth)$/;"	kind:variable	line:14
+auth	../lab03/autoriza_twitter.py	/^auth = OAuthHandler(CONSUMER_API_KEY, CONSUMER_API_SECRET)$/;"	kind:variable	line:9
+auth	../lab04/autoriza_app.py	/^auth = tweepy.AppAuthHandler(CONSUMER_API_KEY, CONSUMER_API_SECRET)$/;"	kind:variable	line:11
+auth	../lab04/autoriza_usuario.py	/^auth = OAuthHandler(CONSUMER_API_KEY, CONSUMER_API_SECRET)$/;"	kind:variable	line:11
+autoriza_app.py	../lab04/autoriza_app.py	1;"	kind:file	line:1
+autoriza_twitter.py	../lab03/autoriza_twitter.py	1;"	kind:file	line:1
+autoriza_usuario.py	../lab04/autoriza_usuario.py	1;"	kind:file	line:1
+avaliacoes	../lab01/comandos.py	/^avaliacoes = json.loads(conteudo)$/;"	kind:variable	line:6
+bot	../chatbot/main.py	/^bot = ChatBot('teste')#, read_only=True$/;"	kind:variable	line:6
+chats	../chatbot/main.py	/^    chats = open('arq\/' + arq, 'r').readlines()$/;"	kind:variable	line:10
+classes	../lab05/Sentimento.py	/^classes = dataset['Classificacao'].values$/;"	kind:variable	line:12
+classes	../lab05/Tokenize.py	/^classes = nltk.pos_tag(tokens)$/;"	kind:variable	line:5
+classifica_digitado.py	../lab04/classifica_digitado.py	1;"	kind:file	line:1
+classifica_novos.py	../lab04/classifica_novos.py	1;"	kind:file	line:1
+clean_tokens	../lab05/BeautifulSoup.py	/^clean_tokens = tokens[:] $/;"	kind:variable	line:19
+coleta_tweets.py	../lab04/coleta_tweets.py	1;"	kind:file	line:1
+comandos.py	../lab01/comandos.py	1;"	kind:file	line:1
+comandos.py	../lab02/comandos.py	1;"	kind:file	line:1
+comandos.py	../lab03/comandos.py	1;"	kind:file	line:1
+comandos.py	../lab04/comandos.py	1;"	kind:file	line:1
+consulta	../lab04/coleta_tweets.py	/^consulta = 'place:n'	$/;"	kind:variable	line:6
+contadorTweets	../lab04/coleta_tweets.py	/^contadorTweets = 0$/;"	kind:variable	line:10
+conteudo	../lab01/comandos.py	/^conteudo = open("avaliacoes.json").read()$/;"	kind:variable	line:4
+crawl	../lab02/crawler.py	/^	def crawl(self):$/;"	kind:member	line:27
+crawl	../lab04/crawler.py	/^	def crawl(self):$/;"	kind:member	line:27
+crawler	../lab02/crawler.py	/^crawler = AppCrawler('https:\/\/itunes.apple.com\/br\/app\/clash-royale\/id1053012308', 1)$/;"	kind:variable	line:58
+crawler	../lab04/crawler.py	/^crawler = AppCrawler('https:\/\/itunes.apple.com\/br\/app\/clash-royale\/id1053012308', 1)$/;"	kind:variable	line:56
+crawler.py	../lab02/crawler.py	1;"	kind:file	line:1
+crawler.py	../lab04/crawler.py	1;"	kind:file	line:1
+dados_treinamento	../lab04/treina_modelo.py	/^dados_treinamento = []$/;"	kind:variable	line:16
+data_hora	../lab04/classifica_novos.py	/^data_hora = '\\n' + str(datetime.now()) + '\\n'$/;"	kind:variable	line:13
+dataset	../lab05/Sentimento.py	/^dataset = pd.read_csv('sentimento.csv')$/;"	kind:variable	line:8
+extra_plugin_dir	../chatops/main_test.py	/^    extra_plugin_dir = '.'$/;"	kind:variable	line:7
+f_neg	../lab04/rotula_tweets.py	/^f_neg = open('corpus_negativo.txt', 'wb')$/;"	kind:variable	line:7
+f_neg	../lab04/treina_modelo.py	/^f_neg = open('corpus_negativo.txt', 'rb')$/;"	kind:variable	line:12
+f_novos	../lab04/novos_tweets.py	/^f_novos = open('novos_tweets.txt', 'wb')$/;"	kind:variable	line:6
+f_pos	../lab04/rotula_tweets.py	/^f_pos = open('corpus_positivo.txt', 'wb')$/;"	kind:variable	line:6
+f_pos	../lab04/treina_modelo.py	/^f_pos = open('corpus_positivo.txt', 'rb')$/;"	kind:variable	line:9
+f_resultado	../lab04/classifica_novos.py	/^f_resultado = open('resultado.txt', "ab")$/;"	kind:variable	line:12
+f_sentenca	../lab04/classifica_novos.py	/^f_sentenca = open('novos_tweets.txt', encoding="utf8")$/;"	kind:variable	line:16
+f_tweets	../lab04/novos_tweets.py	/^f_tweets = open('tweets.json', 'r')$/;"	kind:variable	line:5
+f_tweets	../lab04/rotula_tweets.py	/^f_tweets = open('tweets.json', 'r')$/;"	kind:variable	line:4
+formatar_sentenca	../lab04/classifica_digitado.py	/^def formatar_sentenca(sentenca):$/;"	kind:function	line:5
+formatar_sentenca	../lab04/classifica_novos.py	/^def formatar_sentenca(sentenca):$/;"	kind:function	line:6
+formatar_sentenca	../lab04/treina_modelo.py	/^def formatar_sentenca(sentenca):$/;"	kind:function	line:6
+frases	../lab05/Sentimento.py	/^frases = dataset['Text'].values$/;"	kind:variable	line:11
+frases	../lab05/Tokenize.py	/^frases = nltk.tokenize.sent_tokenize(texto)$/;"	kind:variable	line:3
+freq	../lab05/BeautifulSoup.py	/^freq = nltk.FreqDist(clean_tokens) $/;"	kind:variable	line:24
+freq_frases	../lab05/Sentimento.py	/^freq_frases = vectorizer.fit_transform(frases)$/;"	kind:variable	line:14
+freq_testes	../lab05/Sentimento.py	/^freq_testes = vectorizer.transform(testes)$/;"	kind:variable	line:24
+get_app_do_link	../lab02/crawler.py	/^	def get_app_do_link(self, link):$/;"	kind:member	line:16
+get_app_do_link	../lab04/crawler.py	/^	def get_app_do_link(self, link):$/;"	kind:member	line:16
+hello	../chatops/main.py	/^    def hello(self, msg, args):$/;"	kind:member	line:7
+html	../lab05/BeautifulSoup.py	/^html = response.read() $/;"	kind:variable	line:15
+inverte	../lab01/similares.py	/^def inverte(avaliacoes):$/;"	kind:function	line:58
+main.py	../chatbot/main.py	1;"	kind:file	line:1
+main.py	../chatops/main.py	1;"	kind:file	line:1
+main_test.py	../chatops/main_test.py	1;"	kind:file	line:1
+modelo	../lab04/treina_modelo.py	/^modelo = NaiveBayesClassifier.train(dados_treinamento)	$/;"	kind:variable	line:23
+modelo	../lab05/Sentimento.py	/^modelo = MultinomialNB()$/;"	kind:variable	line:15
+negativos	../lab04/treina_modelo.py	/^negativos = f_neg.read().splitlines()$/;"	kind:variable	line:13
+novo_crawler	../lab02/comandos.py	/^novo_crawler = AppCrawler("http:\/\/www.uol.com", 1)$/;"	kind:variable	line:5
+novos_tweets.py	../lab04/novos_tweets.py	1;"	kind:file	line:1
+numMaxTweets	../lab04/coleta_tweets.py	/^numMaxTweets = int(input('Informe o número máximo de tweets desejados: '))$/;"	kind:variable	line:8
+obtem_placeid.py	../lab04/obtem_placeid.py	1;"	kind:file	line:1
+places	../lab04/obtem_placeid.py	/^places = api.geo_search(query='br', granularity='country')$/;"	kind:variable	line:11
+positivos	../lab04/treina_modelo.py	/^positivos = f_pos.read().splitlines()$/;"	kind:variable	line:10
+resp	../chatbot/main.py	/^    resp = bot.get_response(resq)$/;"	kind:variable	line:16
+response	../lab05/BeautifulSoup.py	/^response = urllib.request.urlopen('http:\/\/php.net\/') $/;"	kind:variable	line:14
+resq	../chatbot/main.py	/^    resq = input('vc: ')$/;"	kind:variable	line:14
+rotula_tweets.py	../lab04/rotula_tweets.py	1;"	kind:file	line:1
+sentenca	../lab04/classifica_digitado.py	/^   sentenca = input('Digite a sentença a ser analisada: ')$/;"	kind:variable	line:16
+sentenca	../lab04/classifica_digitado.py	/^sentenca = input('\\nDigite a sentença a ser analisada: ')$/;"	kind:variable	line:11
+sentencas	../lab04/classifica_novos.py	/^sentencas = f_sentenca.read().splitlines()$/;"	kind:variable	line:17
+sentimento	../lab04/classifica_digitado.py	/^   sentimento = modelo.classify(formatar_sentenca(sentenca.lower()))$/;"	kind:variable	line:14
+sentimento	../lab04/classifica_novos.py	/^   sentimento = modelo.classify(formatar_sentenca(sentenca.lower()))$/;"	kind:variable	line:20
+sentimento	../lab04/rotula_tweets.py	/^    sentimento = input()$/;"	kind:variable	line:15
+sents	../lab04/teste.py	/^sents = sent_tokenize(text)$/;"	kind:variable	line:7
+sim_euclidiana	../lab01/similares.py	/^def sim_euclidiana(avaliacoes, c1, c2):$/;"	kind:function	line:15
+sim_manhattan	../lab01/similares.py	/^def sim_manhattan(avaliacoes, c1, c2):$/;"	kind:function	line:4
+sim_pearson	../lab01/similares.py	/^def sim_pearson(avaliacoes, c1, c2):$/;"	kind:function	line:27
+similares.py	../lab01/similares.py	1;"	kind:file	line:1
+soup	../lab05/BeautifulSoup.py	/^soup = BeautifulSoup(html,"html5lib") $/;"	kind:variable	line:16
+sr	../lab05/BeautifulSoup.py	/^sr = stopwords.words('english') $/;"	kind:variable	line:20
+test_hello	../chatops/main_test.py	/^    def test_hello(self, testbot):$/;"	kind:member	line:9
+teste.py	../lab04/teste.py	1;"	kind:file	line:1
+testes	../lab05/Sentimento.py	/^testes = ['Esse governo está no início, vamos ver o que vai dar',$/;"	kind:variable	line:18
+text	../lab04/teste.py	/^text = "eu gosto de muito de computador"$/;"	kind:variable	line:5
+text	../lab05/BeautifulSoup.py	/^text = soup.get_text(strip=True) $/;"	kind:variable	line:17
+texto	../lab05/Tokenize.py	/^texto = "Acabei de almoçar e gastei 19 reais"$/;"	kind:variable	line:2
+texto_resultado	../lab04/classifica_novos.py	/^   texto_resultado = '(' + sentimento + ') ' + sentenca + '\\n'$/;"	kind:variable	line:21
+texto_tweet	../lab04/novos_tweets.py	/^    texto_tweet = json.loads(linha)['text'] + "\\n"$/;"	kind:variable	line:9
+texto_tweet	../lab04/rotula_tweets.py	/^    texto_tweet = tweet['text'] + "\\n"	$/;"	kind:variable	line:13
+tokens	../lab05/BeautifulSoup.py	/^tokens = [t for t in text.split()] $/;"	kind:variable	line:18
+tokens	../lab05/Tokenize.py	/^tokens = nltk.word_tokenize(texto)$/;"	kind:variable	line:4
+top_similares	../lab01/similares.py	/^def top_similares(avaliacoes, pessoa, n=1, medida=sim_euclidiana):$/;"	kind:function	line:50
+treina_modelo.py	../lab04/treina_modelo.py	1;"	kind:file	line:1
+trends	../lab03/comandos.py	/^trends = api.trends_place(23424768)$/;"	kind:variable	line:5
+trends	../lab03/trends.py	/^trends = api.trends_place(23424768)$/;"	kind:variable	line:4
+trends	../lab04/trends_twitter.py	/^trends = api.trends_place(WOEID)$/;"	kind:variable	line:6
+trends.py	../lab03/trends.py	1;"	kind:file	line:1
+trends_twitter.py	../lab04/trends_twitter.py	1;"	kind:file	line:1
+tweet	../lab04/rotula_tweets.py	/^    tweet = json.loads(linha)$/;"	kind:variable	line:11
+words	../lab04/teste.py	/^words =  word_tokenize(text)$/;"	kind:variable	line:10
