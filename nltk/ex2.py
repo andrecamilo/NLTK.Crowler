@@ -2,41 +2,27 @@
 # Professor Fernando Vieira da Silva MSc.
 # Técnicas para Pré-Processamento - Parte 2
 # Uma vez que o texto já foi devidamente tratado, removendo stopwords e pontuações, e aplicando stemming ou lemmatization, agora precisamos contar a frequência das palavras (ou n-grams) que utilizaremos em seguida como atributos para as técnicas de aprendizado de máquina.
-
 # 1. TF-IDF (Term Frequency - Inverse Document Frequency)
-
 # Term Frequency: um termo que aparece muito em um documento, tende a ser um termo importante. Em resumo, divide-se o número de vezes em que um termo apareceu pelo maior número de vezes em que algum outro termo apareceu no documento.
-
 # tfwd = fwd / mwd
-
 # onde:
 # fwd é o número de vezes em que o termo w aparece no documento d.
 # mwd é o maior valor de fwd obtido para algum termo do documento d
-
 # Inverse Document Frequency: um termo que aparece em poucos documentos pode ser um bom descriminante. Obtem-se dividindo o número de documentos pelo número de documentos em que o termo aparece.
-
 # idfw = log2(n / nw)
-
 # onde:
 # n é o número de documentos no corpus nw é o número de documentos em que o termo w aparece.
-
 # Na prática, usa-se:
-
 # tf-idf = tfwd * idfw
-
 # Podemos calcular o TF-IDF de um corpus usando o pacote scikit-learn. Primeiramente, vamos abrir novamente o texto de Hamlet e armazenar as sentenças em uma ndarray do numpy (como se cada sentença fosse um documento do corpus):
 
 # In [2]:
 import nltk
 import numpy as np
 from nltk.tokenize import sent_tokenize
-
 hamlet_raw = nltk.corpus.gutenberg.raw('shakespeare-hamlet.txt')
-
 sents = sent_tokenize(hamlet_raw)
-
 hamlet_np = np.array(sents)
-
 print(hamlet_np.shape)
 # (2355,)
 # Agora vamos definir uma função para tokenização pelo scikit-learn.
@@ -48,20 +34,13 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 import string
 from nltk.corpus import wordnet
-
 stopwords_list = stopwords.words('english')
-
 lemmatizer = WordNetLemmatizer()
-
 def my_tokenizer(doc):
-    words = word_tokenize(doc)
-    
+    words = word_tokenize(doc)   
     pos_tags = pos_tag(words)
-    
     non_stopwords = [w for w in pos_tags if not w[0].lower() in stopwords_list]
-    
     non_punctuation = [w for w in non_stopwords if not w[0] in string.punctuation]
-    
     lemmas = []
     for w in non_punctuation:
         if w[1].startswith('J'):
@@ -73,31 +52,25 @@ def my_tokenizer(doc):
         elif w[1].startswith('R'):
             pos = wordnet.ADV
         else:
-            pos = wordnet.NOUN
-        
+            pos = wordnet.NOUN        
         lemmas.append(lemmatizer.lemmatize(w[0], pos))
-
     return lemmas
 # E essa função será chamada pelo objeto TfidfVectorizer
 
 # In [4]:
 from sklearn.feature_extraction.text import TfidfVectorizer
-
 hamlet_raw = nltk.corpus.gutenberg.raw('shakespeare-hamlet.txt')
-
 sents = sent_tokenize(hamlet_raw)
-
 hamlet_np = np.array(sents)
-
 tfidf_vectorizer = TfidfVectorizer(tokenizer=my_tokenizer)
-
 tfs = tfidf_vectorizer.fit_transform(hamlet_np)
-
 print(tfs.shape)
 # (2355, 4305)
+
 # In [28]:
 print([k for k in tfidf_vectorizer.vocabulary_.keys()][:20])
 # ['roast', 'spred', 'stoupe', 'play', 'cheff', 'vpo', 'amaz', 'beggers', 'opprest', 'rag', 'staires', 'whipt', 'turneth', 'foreknow', 'auouch', 'germaine', 'rend', 'dishonour', 'bleede', 'among']
+
 # In [7]:
 print(tfs[:50,:50])
 #   (0, 17)	0.40984054295
@@ -121,32 +94,22 @@ print(tfs[:50,:50])
 # In [8]:
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
-
 count_vect = CountVectorizer(ngram_range=(3,3))
-
 n_gram_counts = count_vect.fit_transform(hamlet_np)
-
 tfidf_transformer = TfidfTransformer()
-
 tfs_ngrams = tfidf_transformer.fit_transform(n_gram_counts)
-
 print(tfs_ngrams.shape)
 # (2355, 23483)
+
 # 3. Redução de Dimensionalidade
-
 # A transformação do corpus em atributos contendo as frequências TF-IDF em geral resultará numa ndarray bastante esparsa, ou seja, com muitas dimensões. Porém, além de isso tornar o treinamento de algoritmos mais demorado e custoso (computacionalmente falando), muitas dessas dimensões provavelmente são pouco representativas ou mesmo podem causar ruído durante o treinamento. Para resolver esse problema, podemos aplicar uma técnica de redução de dimensionalidade simples chamada Singular Value Decomposition (SVD).
-
 # Essa técnica transformará os vetores da matriz original, rotacionando e escalando-os, resultando em novas representações. A redução de dimensionalidade é feita ao manter apenas as k dimensões mais representativas que escolhermos. Outra vantagem dessa técnica é que as dimensões originais são, de certa forma, "combinadas", o que resulta em uma nova forma de representar a combinação de termos. No contexto de PLN, essa técnica é conhecida como Latent Semantic Analysis (LSA)
-
 # In [9]:
 from sklearn.decomposition import TruncatedSVD
-
 svd_transformer = TruncatedSVD(n_components=1000)
-
 svd_transformer.fit(tfs)
-
 print(sorted(svd_transformer.explained_variance_ratio_)[::-1][:30])
-[0.043191439648641985, 0.018619648885290274, 0.015991826821457531, 0.015984996712032233, 0.01374433331875188, 0.011771580238263369, 0.0096502136679698872, 0.0095168074249540862, 0.0095050502041718905, 0.0094605420641294159, 0.0093174536752550132, 0.0092700425653072342, 0.0077114068911877344, 0.0069839976227591954, 0.0066546888854241548, 0.0064195285763126407, 0.0058853020300632126, 0.0053722779003061915, 0.0051581711906632521, 0.0049312579564470939, 0.0048675271120150803, 0.0047897360657304577, 0.0044624928648614361, 0.0043399578651715717, 0.0042969022436285731, 0.0041605617283622925, 0.0040394806462038481, 0.0039137333697165681, 0.0038585289999530435, 0.0038298284367979185]
+# [0.043191439648641985, 0.018619648885290274, 0.015991826821457531, 0.015984996712032233, 0.01374433331875188, 0.011771580238263369, 0.0096502136679698872, 0.0095168074249540862, 0.0095050502041718905, 0.0094605420641294159, 0.0093174536752550132, 0.0092700425653072342, 0.0077114068911877344, 0.0069839976227591954, 0.0066546888854241548, 0.0064195285763126407, 0.0058853020300632126, 0.0053722779003061915, 0.0051581711906632521, 0.0049312579564470939, 0.0048675271120150803, 0.0047897360657304577, 0.0044624928648614361, 0.0043399578651715717, 0.0042969022436285731, 0.0041605617283622925, 0.0040394806462038481, 0.0039137333697165681, 0.0038585289999530435, 0.0038298284367979185]
 # Agora vamos manter as dimensões até que a variância acumulada seja maior ou igual a 0.50.
 
 # In [45]:
