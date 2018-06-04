@@ -1,3 +1,7 @@
+
+# pip3 install matplotlib
+# sudo apt-get install python3-tk
+
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
